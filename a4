@@ -1,0 +1,41 @@
+1)
+(a) min-max normalization
+The rage is [new min, new max]
+(b) z-score normalization
+The range is [(old min−mean)/stddev, (old max−mean)/stddev]. In general the range for all possible
+data sets is (−∞, +∞).
+(d) normalization by decimal scaling
+The range is (−1.0, 1.0).
+
+2)
+(a) min-max normalization by setting min = 0 and max = 1
+original data          200   300       400     600   1000
+[0,1] normalized     0       0.125   0.25     0.5      1
+(b) z-score normalization
+original data          200     300       400        600      1000
+z-score                   -1.06   -0.7      -0.35       0.35     1.78
+
+
+
+
+
+
+
+3)
+equal-frequency partitioning
+bin 1      5,10,11,13
+bin 2      15,35,50,55
+bin 3      72,92,204,215
+
+equal-width partitioning
+The width of each interval is (215 − 5)/3 = 70.
+
+bin 1        5,10,11,13,15,35,50,55,72
+bin 2                         92
+bin 3                    204,215
+
+clustering
+We will use a simple clustering technique: partition the data along the 2 biggest gaps in the data.
+bin 1       5,10,11,13,15
+bin 2        35,50,55,72,92
+bin 3         204,215
